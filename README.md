@@ -1,1 +1,3 @@
-"# LP1 - Linguagem de Programa‡Æo 1" 
+# LP1
+
+atividades da turma de LP-1
