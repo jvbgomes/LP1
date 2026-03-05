@@ -13,12 +13,14 @@
 
 ## Como compilar e executar
 
-*Requisitos: Compilador GCC instalado*
+**Requisitos: Compilador GCC instalado**
 
-**1. Entre na pasta do repositório** 
+**1. Entre na pasta do repositório**
+
    cd caminho/para/o/repositório
 
 **2. Compile as questões (um comando por vez):**
+
    gcc number.c -o number  
    gcc factorial.c -o factorial  
    gcc sumarray.c -o sumarray  
@@ -26,7 +28,8 @@
    gcc string.c -o string  
    gcc verifprime.c -o verifprime  
 
-   *(Se estiver no Windows e quiser .exe visível:)*  
+   **(Se estiver no Windows e quiser .exe visível:)**
+
    gcc number.c -o number.exe  
    gcc factorial.c -o factorial.exe  
    gcc sumarray.c -o sumarray.exe  
@@ -35,7 +38,9 @@
    gcc verifprime.c -o verifprime.exe  
 
 **3. Execute a que quiser:**
-   *Linux/macOS:*  
+
+   **Linux/macOS:**
+
    ./number  
    ./factorial  
    ./sumarray  
@@ -43,7 +48,8 @@
    ./string  
    ./verifprime  
 
-   *Windows:*  
+   **Windows:**
+
    number.exe  
    factorial.exe  
    sumarray.exe  
