@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <limits>
 using namespace std;
 
 #define MAX_ALUNOS 50
@@ -11,7 +12,7 @@ public:
     int ano;
 
     void imprimirData() {
-        cout << dia << mes << ano << "\n";
+        cout << dia << "/" << mes << "/" << ano << "\n";
     }    
 };
 
@@ -42,6 +43,14 @@ int main() {
         cout << "0. Sair" << "\n" ;
         cout << "Escolha: " ;
         cin >> opcao;
+
+        if (cin.fail()) { //cin.fail vem da biblio. iostream.
+            cin.clear(); //limpa a entrada errada --> cin.clear vem da biblio. iostream.
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            //ignora o restante da linha --> streamsize é a qtd máxima de caracteres a ignorar, max() retorna o valor máximo possível para o tipo streamsize, e '\n' é o delimitador que indica onde parar de ignorar (neste caso, o final da linha), assim, com o numeric_limits<streamsize>::max() garatimos que sempre vai limpar o buffer ate q o User dê Enter, independendo da qtd de caracteres digitados. --> cin.ignore vem da biblio. iostream.
+            // os (::) foram usados para acessar membros estáticos[max()] da CLASSE diretamente(sem criar um obj.) != o (.) é usado para acessar um membro de um objeto(instancia) --> ex: Aluno a; a.imprimirAluno(); --> o "a" é um objeto criado na memória na classe Aluno.
+            cout << "Entrada invalida. Por favor, digite um numero." << "\n";
+        }
 
         if (opcao == 1) {
             if (totalAlunos < MAX_ALUNOS) {
