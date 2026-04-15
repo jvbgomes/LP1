@@ -4,16 +4,18 @@ using namespace std;
 
 class Conta {
 public:
-    int conta = 0;
+    float saldo;
 }
 
 class Cliente {
 private:
     float saldo;
     Conta *conta;
+
 public: 
     string nome;
 
+    //construtor
     Cliente() {
         cout << "Construindo cliente sem nome! " << endl;
         this->saldo = 0;
@@ -21,6 +23,7 @@ public:
         this->contas = 0;
     }
 
+    //construtor com parametro
     Cliente(string nome) {
         cout << "Construindo cliente! " << endl;
         this->saldo = 0;
@@ -28,9 +31,7 @@ public:
         this->contas = 0;
     }
 
-    void abrirConta(int quantas) {
-        this->contas = new Conta[quantas];
-    }
+    void abrirConta(int quantas) { this->contas = new Conta[quantas]; }
 
     void depositar(float valor) {
         if (this->saldo <= 0) {
@@ -54,7 +55,7 @@ public:
             cout <<"Saldo insuficiente!" << endl;
         }
     }
-
+    //o til(~) é o destrutor da classe
     ~Cliente() {
         cout << "Fechar conta no banco central" << endl;
         if (this->contas != 0) {
@@ -68,6 +69,9 @@ int main() {
     Cliente ori("Oriosvaldo");
     Cliente joa("Joaquina");
     Cliente mari;
+
+    ori.abrirConta(1);
+    mari.abrirConta(1);
 
 //depósito
     ori.depositar(1000);
