@@ -50,7 +50,7 @@ public:
             }
         }
     }
-
+    // 
     static void MostrarTotalFunc() {
         cout << "Total de funcionarios cadastrados: " << Funcionario::contaFunc << endl;
     }
@@ -76,7 +76,8 @@ int main () {
     
     cout << "\n\nAferindo o total de funcionarios cadastrados...\n\n";
 
-    Funcionario::MostrarTotalFunc();
+    // :: é o operador de resolução de escopo, usa-se em membros estáticos para acessar a variável ou método sem precisar de um objeto específico.
+    Funcionario::MostrarTotalFunc(); // Acessando o método estático para mostrar o total de funcionários cadastrados.
     
     cout << "Iniciando processo de exclusão de funcionarios...\n\n";
 
