@@ -54,10 +54,10 @@ void removerAstronautaDoVoo(vector<Astronauta> &astronautas, vector<Voo> &voos, 
     } else if (voos[vooIndice].estado != PLANEJADO) {
         cout << "Erro: Voo " << codigo << " não está planejado!" << endl;
     } else {
-        auto &passageiros = voos[vooIndice].cpfsAstronautas;
-        auto it = find(passageiros.begin(), passageiros.end(), cpf);
-        if (it != passageiros.end()) {
-            passageiros.erase(it);
+        auto &cpfs = voos[vooIndice].cpfsAstronautas;
+        auto it = find(cpfs.begin(), cpfs.end(), cpf);
+        if (it != cpfs.end()) {
+            cpfs.erase(it);
             astronautas[astroIndice].disponivel = true;
             cout << "Astronauta " << cpf << " removido do voo " << codigo << " com sucesso!" << endl;
         } else {
