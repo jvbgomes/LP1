@@ -1,11 +1,5 @@
-CXX      = g++
-CXXFLAGS = -O3 -Wall -pthread
-TARGET   = varredor
-SRC      = main.cpp
+varredor: main.cpp
+	g++ -O3 -Wall -pthread -o varredor main.cpp
 
-$(TARGET): $(SRC)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
-
-.PHONY: clean
 clean:
-	rm -f $(TARGET)
+	rm -f varredor *.txt
