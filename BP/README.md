@@ -4,7 +4,7 @@ Agenda de atendimentos de uma clínica pequena: marca, remarca e lista atendimen
 com profissionais, tudo em memória (sem banco de dados e sem interface gráfica).
 
 Este repositório é o meu projeto da Unidade 1 da disciplina DIM0501 — Boas Práticas de Programação
-(DIMAp/UFRN, Prof. Marcus Terra, 2026.1): refatoração de qualidade do código-base
+(DIMAp/UFRN, Prof. Marcus Terra, 2026.2): refatoração de qualidade do código-base
 `base-original/agenda_base.cpp`, sem adicionar funcionalidade nova. No `RELATORIO.md` tem o
 diagnóstico e as decisões que tomei durante o projeto.
 
