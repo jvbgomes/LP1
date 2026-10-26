@@ -1,0 +1,25 @@
+# Doxyfile mínimo do AgendaFácil. Gere a documentação com `doxygen Doxyfile` (ou `make docs`).
+# As chaves omitidas aqui ficam no valor padrão do Doxygen.
+
+PROJECT_NAME           = "AgendaFácil"
+PROJECT_BRIEF          = "Agenda de atendimentos de uma clínica pequena"
+OUTPUT_DIRECTORY       = docs
+INPUT                  = include src
+RECURSIVE              = YES
+FILE_PATTERNS          = *.hpp *.cpp
+
+OPTIMIZE_OUTPUT_FOR_C  = NO
+BUILTIN_STL_SUPPORT    = YES
+
+EXTRACT_ALL            = NO
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+HIDE_UNDOC_MEMBERS     = NO
+HIDE_UNDOC_CLASSES     = NO
+
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+
+QUIET                  = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_NO_PARAMDOC       = YES

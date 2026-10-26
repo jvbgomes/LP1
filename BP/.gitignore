@@ -1,0 +1,4 @@
+/agenda
+*.o
+/docs/html/
+/docs/latex/
